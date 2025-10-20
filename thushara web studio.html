@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thushara Web Studio</title>
+<style>
+/* ===== Reset & General ===== */
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; }
+body { line-height:1.6; background:#f5faff; color:#0a1f44; }
+
+/* ===== Header & Nav ===== */
+header { position:fixed; width:100%; background:#0a1f44; color:white; z-index:1000; }
+nav { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; }
+nav .logo { font-size:1.5rem; font-weight:bold; }
+nav ul { list-style:none; display:flex; }
+nav ul li { margin-left:2rem; }
+nav ul li a { color:white; text-decoration:none; font-weight:bold; transition:0.3s; }
+nav ul li a:hover { color:#00d1ff; }
+
+/* Burger Menu */
+.burger { display:none; cursor:pointer; flex-direction:column; gap:5px; }
+.burger div { width:25px; height:3px; background:white; }
+
+/* ===== Hero Section ===== */
+.hero { display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; height:100vh; background:linear-gradient(to right,#0a1f44,#003366); color:white; padding:0 2rem; }
+.hero h1 { font-size:3rem; margin-bottom:1rem; }
+.hero p { font-size:1.2rem; margin-bottom:2rem; }
+.btn { padding:0.8rem 2rem; background:#00d1ff; color:#0a1f44; font-weight:bold; border-radius:5px; text-decoration:none; transition:0.3s; }
+.btn:hover { background:#009fcc; color:white; }
+
+/* ===== Sections ===== */
+section { padding:6rem 2rem; max-width:1200px; margin:0 auto; }
+section h2 { text-align:center; margin-bottom:3rem; font-size:2rem; color:#0a1f44; }
+
+/* About */
+#about p { max-width:800px; margin:0 auto; text-align:center; }
+
+/* Services */
+.services { display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; }
+.service-box { flex:1 1 250px; background:white; padding:2rem; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:0.3s; text-align:center; }
+.service-box:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+
+/* ===== Types of Websites ===== */
+.website-types { display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; margin-top:2rem; }
+.website-types div { flex:1 1 250px; background:#00d1ff; color:white; padding:1.5rem; border-radius:10px; text-align:center; font-weight:bold; transition:0.3s; }
+.website-types div:hover { background:#009fcc; }
+
+/* Contact */
+form { max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:1rem; }
+input,textarea { padding:0.8rem; border-radius:5px; border:1px solid #ccc; width:100%; }
+button { padding:0.8rem; border:none; border-radius:5px; background:#00d1ff; color:#0a1f44; font-weight:bold; cursor:pointer; transition:0.3s; }
+button:hover { background:#009fcc; color:white; }
+
+/* Footer */
+footer { text-align:center; padding:2rem; background:#0a1f44; color:white; }
+
+/* ===== Responsive ===== */
+@media (max-width:768px) {
+    nav ul { display:none; flex-direction:column; background:#0a1f44; position:absolute; top:70px; right:0; width:200px; }
+    nav ul.active { display:flex; }
+    .burger { display:flex; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+<nav>
+<div class="logo">Thushara Web Studio</div>
+<ul class="nav-links">
+<li><a href="#hero">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#types">Website Types</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<div class="burger">
+<div></div>
+<div></div>
+<div></div>
+</div>
+</nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+<h1>Professional Web Solutions for Your Business</h1>
+<p>We build modern, responsive, and powerful websites for every business and gaming project.</p>
+<a href="#services" class="btn">Our Services</a>
+</section>
+
+<!-- About -->
+<section id="about">
+<h2>About Us</h2>
+<p>Thushara Web Studio creates modern, responsive websites for businesses and gaming projects. 
+Our goal is to deliver high-quality websites that help your clients grow online.</p>
+</section>
+
+<!-- Services -->
+<section id="services">
+<h2>Our Services</h2>
+<div class="services">
+<div class="service-box">
+<h3>Business Websites</h3>
+<p>Professional websites for companies with responsive design and fast loading.</p>
+</div>
+<div class="service-box">
+<h3>Gaming Websites</h3>
+<p>Interactive and stylish websites for gaming projects or esports teams.</p>
+</div>
+<div class="service-box">
+<h3>Landing Pages</h3>
+<p>High-converting landing pages for products, apps, or services.</p>
+</div>
+</div>
+</section>
+
+<!-- Types of Websites -->
+<section id="types">
+<h2>Types of Websites I Can Make</h2>
+<div class="website-types">
+<div>Business Websites</div>
+<div>Portfolio Websites</div>
+<div>Restaurant Websites</div>
+<div>Gaming / Esports Websites</div>
+<div>E-commerce / Online Shops</div>
+<div>Landing Pages</div>
+<div>Blogs & Personal Websites</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+<h2>Contact Us</h2>
+<form action="https://formsubmit.co/thusharabuisness@gmail.com" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="_replyto" placeholder="Your Email" required>
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+<!-- Redirect to thank you page after submission -->
+<input type="hidden" name="_next" value="https://formsubmit.co/thank-you.html">
+<button type="submit">Send Message</button>
+</form>
+<p style="text-align:center;margin-top:10px;color:#0a1f44;">Messages will be sent directly to <strong>thusharabuisness@gmail.com</strong></p>
+</section>
+
+<!-- Footer -->
+<footer>
+<p>&copy; 2025 Thushara Web Studio. All Rights Reserved.</p>
+</footer>
+
+<script>
+// Burger menu
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav-links');
+burger.addEventListener('click', () => { nav.classList.toggle('active'); });
+</script>
+
+</body>
+</html>
